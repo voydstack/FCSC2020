@@ -177,7 +177,7 @@ On peut vérifier que ce soit bien la fonction welcome en l'appelant directement
 
 ```
 >>> fptr = c.CFUNCTYPE(c.c_void_p)
->>> f = fptr(0x7f429dc36115)
+>>> f = fptr(0x7f9888ac4115)
 >>> f()
 Arriverez-vous à appeler la fonction print_flag ?
 51
@@ -193,7 +193,7 @@ J'ai également essayé de désassembler la section text pour trouver un pattern
 
 N'ayant pas eu la foi de tout analyser, j'ai donc fait un script qui allait scruter chaque adresse du segment text de la librairie après welcome, et essaie de jump à cette adresse en espérant tomber sur la fonction print_flag !
 
-Remarque: À case de l'ASLR, on doit récupérer à chaque fois l'adresse de base de la librarie lib_flag.
+Remarque: À cause de l'ASLR, on doit récupérer à chaque fois l'adresse de base de la librarie lib_flag.
 
 Ni une ni deux, on code un petit script hyper propre (non):
 
