@@ -14,3 +14,5 @@ J'ajouterai des writeups supplémentaires avec le temps, pour l'instant ceux des
 ## Web
 
 * Rainbow Pages v2
+
+Si vous voyez une erreur dans les writeups ou que vous avez des remarques, n'hésitez pas à me PM sur twitter [@voydstack](https://twitter.com/voydstack) :)
