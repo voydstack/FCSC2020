@@ -37,7 +37,7 @@ Mais pas si vite ... Le call est relatif et se base sur la valeur de RIP, nous d
 
 ## Récupération du flag
 
-Il nous suffit donc d'indiquer au service de modifier l'octet à l'offset 0x889 par 0x78, puis de taper /bin/sh pour avoir un shell !
+Il nous suffit donc d'indiquer au service de modifier l'octet à l'offset 0x889 par 0x43, puis de taper /bin/sh pour avoir un shell !
 Seulement, dans le binaire la taille de l'entrée est limitée à 4 caractères, nous ne pouvons pas rentrer /bin/sh ...
 
 Mais system se base sur le PATH, nous pouvons donc raccourcir notre /bin/sh à un simple sh !
