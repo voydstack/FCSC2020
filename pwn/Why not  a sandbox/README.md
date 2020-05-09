@@ -112,7 +112,7 @@ En continuant de lire des fichiers qui peuvent nous être utiles, nous remarquon
 ```
 
 L'interpreteur python semble être wrappé par un autre programme qui doit auditer les événements.
-Analysons le en local:
+Analysons-le en local:
 ```
 o('./spython', 'rb').read()
 ```
@@ -187,7 +187,7 @@ Bingo! La fonction print_flag ne doit pas être située bien loin ...
 
 ## Appel de la fonction print_flag
 
-N'ayant pas réussi à reconstitué l'ELF de la librairie, je ne sais pas où est située exactement print_flag dans le binaire ...
+N'ayant pas réussi à reconstituer l'ELF de la librairie, je ne sais pas où est située exactement print_flag dans le binaire ...
 
 J'ai également essayé de désassembler la section text pour trouver un pattern reconnaissable de début de fonction (push rbp  / sub rsp ...), mais le code était assez étrange et contenait pas mal d'opcode "ret" (0xc3).
 

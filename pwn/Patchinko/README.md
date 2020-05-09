@@ -15,9 +15,9 @@ Le binaire n'est pas très compliqué, il nous demande dans un premier temps not
 
 On remarque également la présence de **system** qui est suspecte. Elle est utilisée dans le binaire pour afficher un simple message.
 
-Il faudrait donc remplacer le call d'une fonction prenant en premier paramètre une chaîne que l'on contrôle par system, ce qui nous permettra d'éxecuter une commande sur le service !
+Il faudrait donc remplacer le call d'une fonction prenant en premier paramètre une chaîne que l'on contrôle par **system**, ce qui nous permettra d'éxecuter une commande sur le service !
 
-Prenons par exemple strlen, qui est un parfait candidat pour ce que nous recherchons !
+Prenons par exemple **strlen**, qui est un parfait candidat pour ce que nous recherchons !
 
 ## Altération du flux d'exécution
 

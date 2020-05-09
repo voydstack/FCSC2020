@@ -8,7 +8,7 @@ On a donc affaire à un appel syscall custom ayant l'id 333.
 
 ## Éxecution de l'appel système
 
-Ni une ni deux, on code un petit programme en assembleur pour tenter de percer les mystères de ce mystérieux syscall
+Ni une ni deux, on code un petit programme en assembleur pour tenter de percer les mystères de ce mystérieux syscall.
 
 ```nasm
 bits 64
@@ -25,7 +25,7 @@ _start:
 
 On exit également avec le code de retour du syscall pour voir ce qu'il nous renvoie.
 
-On l'assemble puis on l'envoie directement sur la machine distante
+On l'assemble puis on l'envoie directement sur la machine distante:
 
 ```bash
 nasm -f elf64 pepin.asm -o pepin.o

@@ -33,7 +33,7 @@ Très bien nous n'avons qu'à lui fournir un shellcode RISC-V pour lancer un she
 
 ## Exploitation du binaire
 
-N'ayant aucune connaissance en assembleur RISC-V, je m'empresse d'aller voir sur shell-storm s'il n'y en a pas déjà un qui existe ...
+N'ayant aucune connaissances en assembleur RISC-V, je m'empresse d'aller voir sur shell-storm s'il n'y en a pas déjà un qui existe ...
 
 Bingo ! [celui-ci](http://shell-storm.org/shellcode/files/shellcode-908.php) devrait faire l'affaire.
 
@@ -43,9 +43,9 @@ En analysant le contenu de notre chaîne, celle-ci semble corrompue (probablemen
 N'ayant pas la foi de reverse cet algorithme pour trouver les badchars à ne pas adopter dans le shellcode, puis créer ce shellcode sans badchars, on va se pencher sur une autre solution !
 
 On remarque que cet algorithme se base sur la taille de notre chaîne pour faire son travail.
-Une chaîne se termine par un octet nul (\x00), et la fonction prenant notre entrée est fgets, s'arrêtant seulement pour les retour à la ligne (\x0a) et le caractère de fin de fichier EOF.
+Une chaîne se termine par un octet nul (\x00), et la fonction prenant notre entrée est fgets, s'arrêtant seulement pour les retours à la ligne (\x0a) et le caractère de fin de fichier EOF.
 
-De ce fait, nous ne sommes pas obligé d'avoir du code sans octets nul à l'intérieur, ce qui peut nous faire gagner beaucoup de place.
+De ce fait, nous ne sommes pas obligés d'avoir du code sans octets nul à l'intérieur, ce qui peut nous faire gagner beaucoup de place.
 
 Si nous mettons un octet nul vers le début de la chaîne, alors seulement les octets non nuls qui sont avant seront filtrés, ce qui laissera le reste intact !
 

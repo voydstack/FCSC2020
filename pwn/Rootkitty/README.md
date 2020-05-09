@@ -242,7 +242,7 @@ cat /proc/kallsyms | grep "cleanup_module"
 cat /proc/kallsyms | grep "sys_exit"
 ```
 
-On obtiens (adresses valide jusqu'à un prochain redémarrage du noyau, à cause de KASLR):
+On obtient (adresses valide jusqu'à un prochain redémarrage du noyau, à cause de KASLR):
 
 ```
 cleanup_module @ ffffffffc02df36e
@@ -251,7 +251,7 @@ sys_exit @ ffffffffa40390f0
 
 On code tout ça, ce qui nous donne:
 
-(Excusez moi à l'avance pour la non propreté de ce code)
+(Excusez-moi à l'avance pour la non propreté de ce code)
 
 ```c
 #include <stdio.h>
@@ -298,7 +298,7 @@ gcc -static exploit.c -o exploit
 
 ## Récupération du flag
 
-Il ne nous reste plus qu'à exécuter notre exploit et à réessayer le **ls -la** à la racine
+Il ne nous reste plus qu'à exécuter notre exploit et à réessayer le **ls -la** à la racine:
 
 ``` 
 $ ls -la
